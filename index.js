@@ -1,5 +1,5 @@
 class Persona {
-     nombre;
+     nombre;// aqui trabaja Ben
      apellidos;
      fecha_nacimiento;
      #nss;
