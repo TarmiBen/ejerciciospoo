@@ -39,7 +39,13 @@ class Persona {
 }
 
 
+// parte de edmundo
 
+//HOLAAAAA LOS TQM ATENTAMENTE MAMBERROI
+class Mundo {
+   nombre2;
+   apellido2;
+}
 class Alumno extends Persona  {
     #matricula;
     carrera;
