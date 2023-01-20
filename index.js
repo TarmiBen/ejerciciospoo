@@ -1,3 +1,9 @@
+class Perro{
+   nombre;
+   constructor(nombre){
+      this.nombre = nombre
+   }
+}
 class Persona {
      nombre;// aqui trabaja Ben
      apellidos;
