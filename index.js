@@ -33,7 +33,7 @@ class Persona {
 }
 
 
-
+// parte de edmundo
 class Alumno extends Persona  {
     #matricula;
     carrera;
