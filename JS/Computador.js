@@ -1,0 +1,3 @@
+class Computador extends Dispositivo{
+    
+}
