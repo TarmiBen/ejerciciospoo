@@ -7,6 +7,7 @@ function crearPersona(){
     personas.push(p1);
     alert("Se guardo la persona");
     updateOptionSelect();
+    document.getElementById('name').value = ''
 }
 
 function updateOptionSelect(){
@@ -27,5 +28,8 @@ function crearArticulo(){
     persona.setArticulo(ar1);
     articulos.push(ar1);
     alert("Se guardo de manera correca el articulo");
+
+    document.getElementById('name-article').value = "";
+    document.getElementById('autor').value = "";
 }
 
