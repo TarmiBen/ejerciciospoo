@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Tira de Materias</title>
+</head>
+<body>
+    <h3>Carrera</h3>
+    <div>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div>
+        <label for="generation">Generación</label>
+        <input type="text" name="generation" id="generation">
+    </div>
+    <button onclick="guardarCarrera()">Guardar</button>
+    <h3>Grupo</h3>
+    <div>
+        <label for="name-group">Nombre</label>
+        <input type="text" name="name-group" id="name-group">
+    </div>
+    <div>
+        <label for="aula">Aula</label>
+        <input type="text" name="aula" id="aula">
+    </div>
+    <div>
+        <label for="carrera">Carrera</label>
+        <select name="carrera" id="carrera">
+           
+        </select>
+    </div>
+    <button onclick="crearGrupo()">Guardar</button>
+    <h3>Alumnos</h3>
+    <div>
+        <label for="name">Nombre</label>
+        <input type="text" name="name-student" id="name-student">
+    </div>
+    
+    <div>
+        <label for="lastname">Apellidos</label>
+        <input type="text" name="lastname" id="lastname">
+    </div>
+    <div>
+        <label for="date">fecha de nacimiento</label>
+        <input type="date" name="date" id="date">
+    </div>
+    <div>
+        <label for="matricula">matricula</label>
+        <input type="text" name="matricula" id="matricula">
+    </div>
+    <div>
+        <label for="nss">NSS</label>
+        <input type="number" name="nss" id="nss">
+    </div>
+    <button >Guardar</button>
+
+
+    <script src="Persona.js"></script>
+    <script src="Alumno.js"></script>
+    <script src="Docente.js"></script>
+    <script src="Carrera.js"></script>
+    <script src="Grupo.js"></script>
+    <script src="Asignatura.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
