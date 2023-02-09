@@ -7,9 +7,6 @@ class Persona {
     #correo;
     constructor(name){
         this.Nombre = name;
-        //this.Apellidos = lastname;
-        //this.Fecha_nacimiento = date;
-        //this.#correo = email
         this.#id =  this.#crearId();
     }
 
@@ -45,8 +42,8 @@ class Persona {
     }
 
     setArticulo = function(Articulo){
-       let articulo = this.Articulo;
-       articulo.push(Articulo);
+       let articulo_local = this.Articulo;
+       articulo_local.push(Articulo);
     }
 }
 

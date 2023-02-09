@@ -5,7 +5,7 @@ class Articulo {
     constructor(nombre, Persona){
         this.Nombre = nombre;
         this.Autor = Persona;
-        this.url =  Tool.strToSlug(this.Nombre);
+        this.url =  Helper.strToSlug(nombre);
     }
     
 }

@@ -8,10 +8,28 @@
 
 </head>
 <body>
-    <h3>Alumno</h3>
+    <h3>Persona</h3>
+    
+    <div>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <button onclick="crearPersona()">Crear</button>
+    <hr>
+    <h3>Articulo</h3>
+    <div>
+        <label for="name-article">Nombre</label>
+        <input type="text" name="name-article" id="name-article">
+    </div>
+    <div>
+        <label for="autor">Autor</label>
+        <select name="autor" id="autor">
+        </select>
+    </div>
+    <button onclick="crearArticulo()">Crear</button>
     
     <script src="Persona.js"></script>
-    <script src="Tool.js"></script>
+    <script src="Helper.js"></script>
     <script src="Articulo.js"></script>
     <script src="main.js"></script>
 
