@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Articulos</title>
+
+</head>
+<body>
+    <div>
+        Menu
+        <ul>
+            <a href="personas.html"><li>Personas</li></a>
+            <a href="articulos.html"><li>Articulos</li></a>
+        </ul>
+    </div>
+    
+    <h3>Articulo</h3>
+    <div>
+        <label for="name-article">Nombre</label>
+        <input type="text" name="name-article" id="name-article">
+    </div>
+    <div>
+        <label for="autor">Autor</label>
+        <select name="autor" id="autor">
+        </select>
+    </div>
+    <button onclick="crearArticulo()">Crear</button>
+    
+    <script src="Persona.js"></script>
+    <script src="Helper.js"></script>
+    <script src="Articulo.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

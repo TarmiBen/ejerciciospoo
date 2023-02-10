@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    personas
+
+    <button onclick="actualizarDatos()">Actualizar</button>
+    <script src="Tool.js"></script>
+    <script src="Persona.js"></script>
+    <script src="Articulo.js"></script>
+    <script>
+        var personas = [];
+        var datos = Tool.getDatFromLocalStorage('personas')
+       for (let i = 0; i < datos.length; i++) {
+            var p1 = new Persona(datos[i].Nombre)
+            p1.Apellidos = datos[i].Apellidos;
+            personas.push(p1);
+       }
+
+       function actualizarDatos(){
+        Tool.setDataToLocalStorage('personas', personas);
+    
+       }
+    </script>
+</body>
+</html>
