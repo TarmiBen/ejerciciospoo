@@ -31,5 +31,59 @@ function crearGrupo(){
     let carrera = document.getElementById('carrera');
     let gr1 = new Grupo(name.value, aula.value);
     gr1.asignarCarrera(carreras[carrera.value]);
+    carreras[carrera.value].agregarGrupo(gr1);
     grupos.push(gr1);
+
+    insertGrupos();
+
+    name.value = "";
+    aula.value = "";
+    carrera.value = "";
+}
+
+function insertGrupos(){
+    let groups =  document.getElementById('groups');
+    let options = ' <option value="" selected disabled>Seleccione</option>';
+    for(let i = 0; i<grupos.length; i++){
+        options += `<option value="${i}">${grupos[i].Nombre}</option>`;
+    }
+    
+    groups.innerHTML = options;
+}
+
+function guardarAlumno(){
+    let name = document.getElementById('name-student');
+    let lastname = document.getElementById('lastname');
+    let date = document.getElementById('date');
+    let id = document.getElementById('matricula');
+    let nss = document.getElementById('matricula');
+    
+    if(alumnos.length < 2 ){
+    let al1 =  new Alumno(name.value, lastname.value,date.value,id.value,nss.value);
+    alumnos.push(al1);
+
+    insertAlumnos();
+    }else{
+        alert("El cupo se lleno");
+    }
+
+
+
+}
+
+function insertAlumnos(){
+    let students =  document.getElementById('students');
+    let options = '<option value="" selected disabled>Seleccione</option>';
+    for(let i = 0; i<alumnos.length; i++){
+        options += `<option value="${i}">${alumnos[i].Nombre}</option>`;
+    }
+   
+    students.innerHTML = options;
+}
+
+function asignarAlumnoaGrupo(){
+    let alumno = alumnos[document.getElementById('students').value];
+    let grupo = grupos[document.getElementById('groups').value];
+    alumno.asignarGrupo(grupo);
+    grupo.agregarAlumno(alumno);
 }

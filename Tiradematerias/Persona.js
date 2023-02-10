@@ -7,7 +7,7 @@ class Persona {
         this.Nombre =  nombre;
         this.Apellidos = apellidos;
         this.F_nacimiento =  fecha;
-        this.#id = this.#crearId();
+        //this.#id = this.#crearId();
     }
 
     calcularEdad =  function(){

@@ -1,11 +1,17 @@
 class Articulo {
     Nombre;
-    Autor;
+    #Autor;
     url;
-    constructor(nombre, Persona){
+    constructor(nombre){
         this.Nombre = nombre;
-        this.Autor = Persona;
         this.url =  Helper.strToSlug(nombre);
+    }
+    /**
+     * 
+     * @param {Persona} autor 
+     */
+    asignarAutor = function(autor){
+        this.#Autor =  autor
     }
     
 }

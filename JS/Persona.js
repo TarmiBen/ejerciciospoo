@@ -41,7 +41,7 @@ class Persona {
         return  name.charAt(0) + Math.floor(Math.random() * 1000);
     }
 
-    setArticulo = function(Articulo){
+    agregarArticulo = function(Articulo){
        let articulo_local = this.Articulo;
        articulo_local.push(Articulo);
     }
