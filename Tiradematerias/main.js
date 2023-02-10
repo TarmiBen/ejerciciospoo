@@ -2,11 +2,11 @@ var carreras = [];
 var alumnos = [];
 var docentes = [];
 var asignaturas = [];
-var grupos =  [];
+var grupos = [];
 
-function guardarCarrera(){
-    let name =  document.getElementById('name');
-    let generation  =  document.getElementById('generation');
+function guardarCarrera() {
+    let name = document.getElementById('name');
+    let generation = document.getElementById('generation');
     let crr1 = new Carrera(name.value, generation.value);
     carreras.push(crr1);
     alert("Se guardo la carrera");
@@ -14,18 +14,20 @@ function guardarCarrera(){
     generation.value = "";
 
     insertCarreras();
+
+    localStorage.setItem("carreras", JSON.stringify(carreras));
 }
 
-function insertCarreras(){
-    let carrera =  document.getElementById('carrera');
+function insertCarreras() {
+    let carrera = document.getElementById('carrera');
     let options = ' <option value="" selected disabled>Seleccione</option>';
-    for(let i = 0; i<carreras.length; i++){
+    for (let i = 0; i < carreras.length; i++) {
         options += `<option value="${i}">${carreras[i].Nombre}</option>`;
     }
     carrera.innerHTML = options;
 }
 
-function crearGrupo(){
+function crearGrupo() {
     let name = document.getElementById('name-group');
     let aula = document.getElementById('aula');
     let carrera = document.getElementById('carrera');
@@ -41,49 +43,50 @@ function crearGrupo(){
     carrera.value = "";
 }
 
-function insertGrupos(){
-    let groups =  document.getElementById('groups');
+function insertGrupos() {
+    let groups = document.getElementById('groups');
     let options = ' <option value="" selected disabled>Seleccione</option>';
-    for(let i = 0; i<grupos.length; i++){
+    for (let i = 0; i < grupos.length; i++) {
         options += `<option value="${i}">${grupos[i].Nombre}</option>`;
     }
-    
+
     groups.innerHTML = options;
 }
 
-function guardarAlumno(){
+function guardarAlumno() {
     let name = document.getElementById('name-student');
     let lastname = document.getElementById('lastname');
     let date = document.getElementById('date');
     let id = document.getElementById('matricula');
     let nss = document.getElementById('matricula');
-    
-    if(alumnos.length < 2 ){
-    let al1 =  new Alumno(name.value, lastname.value,date.value,id.value,nss.value);
+
+
+    let al1 = new Alumno(name.value, lastname.value, date.value, id.value, nss.value);
     alumnos.push(al1);
-
-    insertAlumnos();
-    }else{
-        alert("El cupo se lleno");
-    }
-
-
+    name.value = "";
+    lastname.value = "";
+    date.value = "";
+    id.value = "";
+    nss.value = "";
 
 }
 
-function insertAlumnos(){
-    let students =  document.getElementById('students');
+function insertAlumnos() {
+    let students = document.getElementById('students');
     let options = '<option value="" selected disabled>Seleccione</option>';
-    for(let i = 0; i<alumnos.length; i++){
+    for (let i = 0; i < alumnos.length; i++) {
         options += `<option value="${i}">${alumnos[i].Nombre}</option>`;
     }
-   
+
     students.innerHTML = options;
 }
 
-function asignarAlumnoaGrupo(){
+function asignarAlumnoaGrupo() {
     let alumno = alumnos[document.getElementById('students').value];
     let grupo = grupos[document.getElementById('groups').value];
     alumno.asignarGrupo(grupo);
     grupo.agregarAlumno(alumno);
 }
+
+var datos  =  localStorage.getItem ( "carreras" );
+console.log(datos);
