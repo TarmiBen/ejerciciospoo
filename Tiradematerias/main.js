@@ -88,5 +88,17 @@ function asignarAlumnoaGrupo() {
     grupo.agregarAlumno(alumno);
 }
 
-var datos  =  localStorage.getItem ( "carreras" );
-console.log(datos);
+
+function login(){
+    var name = document.getElementById('name').value;
+    var pass = document.getElementById('pass').value;
+    let user = identifyUser(name)
+
+    var alumno1 = new Alumno(user);
+
+    if(alumno1.login(name, pass)){
+        window.location.href = "alumno.html";
+    }else{
+        alert("Usuario o contraseña incorrectos");
+    }
+}

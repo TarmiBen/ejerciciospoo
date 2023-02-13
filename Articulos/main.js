@@ -11,6 +11,14 @@ function crearPersona(){
     document.getElementById('name').value = ''
 }
 
+function login(){
+    var name = document.getElementById('name').value;
+    var pass = document.getElementById('pass').value;
+
+    var user = new Persona(name, pass);
+    if(user.login(personas)){
+}
+
 
 
 

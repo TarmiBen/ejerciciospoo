@@ -40,4 +40,10 @@ class Tool {
         return JSON.parse( localStorage.getItem(parameter));
     }
 
+    static identifyUser(user){
+        personas = getDatFromLocalStorage(personas)
+        user_ = personas.prototype.find(user);
+        return user
+    }
+
 }

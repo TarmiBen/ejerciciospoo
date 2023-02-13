@@ -14,4 +14,14 @@ class Alumno extends Persona {
     asignarGrupo = function (grupo) {
         this.#Grupo = grupo
     }
+    
+    login = function (pass) {
+        if(this.password == pass){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    
 }
