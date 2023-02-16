@@ -1,8 +1,13 @@
-var carreras = [];
+var carreras = Tool.getCarreraFromLocalStorage();
 var alumnos = [];
 var docentes = [];
 var asignaturas = [];
 var grupos = [];
+
+insertCarreras();
+
+
+
 
 function guardarCarrera() {
     let name = document.getElementById('name');
@@ -15,7 +20,8 @@ function guardarCarrera() {
 
     insertCarreras();
 
-    localStorage.setItem("carreras", JSON.stringify(carreras));
+    Tool.setDataToLocalStorage("carreras", carreras);
+
 }
 
 function insertCarreras() {
@@ -102,3 +108,4 @@ function login(){
         alert("Usuario o contraseña incorrectos");
     }
 }
+
