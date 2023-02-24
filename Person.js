@@ -1,16 +1,16 @@
 class Person{
-    #id;
+    id;
     Name;
     Lastname;
     Email;
     Phone;
     
-    constructor(name, lastname, email, phone){
+    constructor(name, lastname, email, phone, id){
         this.Name = name;
         this.Lastname = lastname;
         this.Email = email;
         this.Phone = phone;
-        this.#id = this.#generateId();
+        this.id =  id == null ? this.#generateId() : id;
     }
 
     getFullName(){
@@ -18,7 +18,7 @@ class Person{
     }
 
     getId(){
-        return this.#id;
+        return this.id;
     }
 
      /**

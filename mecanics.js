@@ -29,10 +29,19 @@ function updateTable(){
             <td>${element.getFullName()}</td>
             <td>${element.Phone}</td>
             <td>${element.Email}</td>
-            <td><a href="" class="">Ver</a></td>
+            <td><a href="" class="">Ver</a><button class="btn btn-danger" href="#" onclick="deleteMecanic('${element.getId()}')">Eliminar</td>
         </tr>`;
     });
     let body = document.getElementById('table_body_mecanics');
     body.innerHTML = items;
     
+}
+
+function deleteMecanic(idMecanic){
+    let result = mecanics.findIndex(({ id }) => id === idMecanic);
+    if(result > -1){
+        mecanics.splice(result, 1);
+      }
+    Tool.setDataToLocalStorage('mecanics', mecanics);
+    window.location.reload();
 }

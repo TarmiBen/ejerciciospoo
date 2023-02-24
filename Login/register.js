@@ -8,7 +8,7 @@ function registerUser(){
     
     let result = users.find(({ email }) => email === user.value);
     
-    if(result == undefined){
+    if(result == undefined){    
         users.push(user1);
         localStorage.setItem('users', JSON.stringify(users));
         alert("Usuario Registrado");

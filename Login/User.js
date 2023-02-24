@@ -6,6 +6,7 @@ class User {
         this.password = password; 
     }
     
+
     /**
      * 
      * @param {Array} users 
@@ -17,7 +18,9 @@ class User {
             return "El usuario no se encuentra registrado";
         } 
         else{
+            
             return result.password == this.password ? true : 'Contraseña incorrecta';
+             
         }
     }
 }

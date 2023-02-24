@@ -28,7 +28,7 @@ class Tool {
         let mecanicsArray = JSON.parse( localStorage.getItem(parameter));
         if(mecanicsArray.length != 0){
             mecanicsArray.forEach(element => {
-                let object =  new Mecanic(element.Name, element.Lastname, element.Email, element.Phone, element.Specialty);
+                let object =  new Mecanic(element.Name, element.Lastname, element.Email, element.Phone, element.Specialty, element.id);
                 mecanics.push(object);
             });
         }
